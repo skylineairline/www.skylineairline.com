@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="images/FAVICON.jpg">
+</head>
+<body>
+<header>
+    <h1>Skyline Airways</h1>
+    <p>Your trusted travel companion</p><hr><br>
+</header>
+<main>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <div style="position: relative;">
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="checkbox" id="show-password">
+                <label for="show-password">Show Password</label>
+            </div><br>
+            <input type="submit" value="Login">
+            <p id="errorMessage" style="text-align: center; margin-top: 10px;"></p>
+            <p style="text-align: center;"><a href="registration.html">No account? register here</a>.</p>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Skyline PH. All rights reserved.</p>
+    <nav>
+        <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+    </nav>
+</footer>
+<script src="login.js"></script>
+</body>
+</html>

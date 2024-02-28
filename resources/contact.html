@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline Contact</title>
+    <link rel="icon" href="images/FAVICON.jpg">
+
+    <style>
+        /* Absolute positioning for background image */
+        body {
+            position: relative;
+            min-height: 100vh;
+            min-width: 100vw;
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+            background-image: url("images/CONTACT.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Centering the container */
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; /* Adjust width as needed */
+            max-width: 400px; /* Limit maximum width */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 0.5s ease forwards; /* Fade-in animation */
+        }
+        
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #0056b3;;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        /* Style for back button */
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button a {
+            background-color: #0056b3;;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-button a:hover {
+            background-color: #45a049;
+        }  
+
+        /* Notification style */
+        .notification {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            margin-top: 10px;
+            display: none;
+            animation: fadein 0.5s; /* Add animation */
+        }
+
+        /* Animation */
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Contact Us</h1>
+    <form action="#" method="post" id="contactForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <div class="back-button">
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+</div>
+
+<script>
+    // Function to handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        // Prevent default form submission
+        event.preventDefault();
+
+        // Get form inputs
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        // Display notification
+        var notification = document.getElementById('notification');
+        notification.textContent = 'The message has been submitted';
+        notification.style.display = 'block';
+
+        // Reset form inputs
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+    });
+
+    // Function to clear notification when any input field changes
+    document.getElementById('name').addEventListener('input', clearNotification);
+    document.getElementById('email').addEventListener('input', clearNotification);
+    document.getElementById('message').addEventListener('input', clearNotification);
+
+    function clearNotification() {
+        var notification = document.getElementById('notification');
+        notification.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

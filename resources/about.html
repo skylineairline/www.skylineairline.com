@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline About</title>
+    <link rel="icon" href="images/FAVICON.jpg">
+    <style>
+
+/* Fancy styling for the About section */
+.about__container {
+  padding: 3rem;
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.about__description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #495057;
+}
+
+.subheader {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000; /* Changed to black */
+  margin-bottom: 1.5rem;
+  position: relative;
+  text-decoration: none; /* Removed underline */
+}
+
+.subheader::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+}
+
+.mission__description,
+.vision__description,
+.values__list,
+.services__list,
+.contact__info {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.values__list,
+.services__list {
+  padding-left: 2rem;
+}
+
+.contact__info a {
+  color: #3d5cb8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact__info a:hover {
+  color: #1a4aab;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about__container {
+  animation: slideIn 0.8s ease forwards;
+}
+
+/* Style for the back to dashboard button */
+.back-button {
+  background-color: #3d5cb8;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #1a4aab;
+}
+
+
+    </style>
+</head>
+<body>
+    <section class="about">
+        <div class="section__container about__container">
+          <h1 class="section__header">About Skyline Airways PH</h1>
+          <p class="about__description">
+            Skyline Airways PH is a premier airline dedicated to providing exceptional travel experiences to passengers around the world. With a commitment to excellence and a passion for air travel, we strive to be your trusted travel companion, ensuring safe, comfortable, and unforgettable journeys.
+          </p>
+      
+          <div class="about__mission-vision">
+            <div class="mission">
+              <h3 class="subheader">Our Mission</h3>
+              <p class="mission__description">
+                At Skyline Airways PH, our mission is to connect the world by offering reliable, convenient, and affordable air travel solutions. We aim to exceed customer expectations by providing superior service, innovative amenities, and personalized attention to every passenger.
+              </p>
+            </div>
+      
+            <div class="vision">
+              <h3 class="subheader">Our Vision</h3>
+              <p class="vision__description">
+                We envision a future where travel is seamless, enriching, and accessible to all. By embracing innovation, sustainability, and customer-centricity, we aspire to become a leading global airline known for our reliability, efficiency, and commitment to excellence.
+              </p>
+            </div>
+          </div>
+      
+          <div class="core-values">
+            <h3 class="subheader">Core Values</h3>
+            <ul class="values__list">
+              <li>Excellence: We strive for excellence in everything we do, delivering exceptional service and experiences to our passengers.</li>
+              <li>Safety: Safety is our top priority. We adhere to the highest safety standards to ensure the well-being and security of our passengers and crew.</li>
+              <li>Innovation: We embrace innovation to enhance the travel experience, introducing new technologies and amenities to exceed passenger expectations.</li>
+              <li>Integrity: We conduct business with integrity, honesty, and transparency, building trust with our customers, partners, and employees.</li>
+              <li>Sustainability: We are committed to sustainability and environmental responsibility, minimizing our carbon footprint and contributing to a greener future.</li>
+            </ul>
+          </div>
+      
+          <div class="services">
+            <h3 class="subheader">Our Services</h3>
+            <ul class="services__list">
+              <li>Flight Destinations: Skyline Airways PH offers a wide range of domestic and international flight destinations, providing passengers with convenient options to explore the world.</li>
+              <li>In-Flight Experience: Enjoy a comfortable and enjoyable journey with our modern fleet, spacious cabins, delicious onboard dining, and entertainment options.</li>
+              <li>Customer Support: Our dedicated customer support team is available 24/7 to assist passengers with bookings, inquiries, and travel assistance, ensuring a seamless and stress-free experience.</li>
+            </ul>
+          </div>
+      
+          <div class="contact">
+            <h3 class="subheader">Contact Us</h3>
+            <p class="contact__info">Experience the difference with Skyline Airways PH. For inquiries, bookings, or assistance, please contact our customer support team at <a>095-692-792-99</a> or via email at <a href="contact.html">skylineairways@gmail.com</a>.</p>
+          </div>
+        </div>
+        <button class="back-button" onclick="window.location.href = 'dashboard.html';" style="margin-top: 20px;">Back to Dashboard</button>
+      </section>
+      
+</body>
+</html>
